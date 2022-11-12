@@ -14,6 +14,9 @@ const searchForm = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
 const loadBtn = document.querySelector('.load-more');
 
+
+
+
 // Needed to query the Pixabay API
 let perPage = 40;
 let page = 0;
@@ -35,8 +38,13 @@ async function eventHandler(e) {
 
   fetchImages(name, page, perPage)
     .then(name => {
-      console.log(name)
+      // console.log(name)
       let totalPages = name.totalHits / perPage;
+
+      if (searchQuery.value.trim()=== '') {
+        Notiflix.Notify.info('wooow')
+        return
+      }
 
       if (name.hits.length > 0) {
         Notiflix.Notify.success(`Hooray! We found ${name.totalHits} images.`);
