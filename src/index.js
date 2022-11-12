@@ -42,7 +42,7 @@ async function eventHandler(e) {
       let totalPages = name.totalHits / perPage;
 
       if (searchQuery.value.trim()=== '') {
-        Notiflix.Notify.info('wooow')
+        Notiflix.Notify.info('You need to enter something for the search!')
         return
       }
 
