@@ -4,7 +4,6 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 
-// import { fadeEffect } from './js/preloader';
 import { fetchImages } from './js/fetchImages';
 
 // HTML elements
@@ -25,7 +24,6 @@ let name = searchQuery.value;
 loadBtn.style.display = 'none';
 closeBtn.style.display = 'none';
 
-// Handling the "submit" button event
 
 async function eventHandler(e) {
   e.preventDefault();
@@ -69,7 +67,6 @@ async function eventHandler(e) {
 
 searchForm.addEventListener('submit', eventHandler);
 
-// Function for markup for HTML gallery element
 
 function renderGallery(name) {
   const markup = name.hits
@@ -120,7 +117,6 @@ function renderGallery(name) {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
 
-// Load more button - function
 
 loadBtn.addEventListener(
   'click',
@@ -141,7 +137,3 @@ loadBtn.addEventListener(
   },
   true
 );
-
-// Preloader
-
-// window.addEventListener('load', fadeEffect);
