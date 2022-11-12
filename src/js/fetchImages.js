@@ -12,7 +12,7 @@ async function fetchImages(name, page, perPage) {
     );
     return response.data;
   } catch (error) {
-    console.log('ERROR: ' + error);
+    console.log('ERROR: ', error);
   }
 }
 

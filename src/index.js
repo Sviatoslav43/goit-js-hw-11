@@ -35,6 +35,7 @@ async function eventHandler(e) {
 
   fetchImages(name, page, perPage)
     .then(name => {
+      console.log(name)
       let totalPages = name.totalHits / perPage;
 
       if (name.hits.length > 0) {
